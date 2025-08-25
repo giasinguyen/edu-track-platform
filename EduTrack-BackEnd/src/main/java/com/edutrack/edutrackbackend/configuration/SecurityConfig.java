@@ -28,9 +28,9 @@ public class SecurityConfig {
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/health").permitAll()
                 .requestMatchers("/api/v1/courses/**").permitAll()
-                .requestMatchers("/api/v1/leads").permitAll()
-                .requestMatchers("/api/v1/orders").permitAll()
-                .requestMatchers("/api/v1/track").permitAll()
+                .requestMatchers("/api/v1/leads/**").permitAll()
+                .requestMatchers("/api/v1/orders/**").permitAll()
+                .requestMatchers("/api/v1/tracking/**").permitAll()
                 .requestMatchers("/api/v1/admin/**").permitAll() // For MVP, allow admin endpoints without auth
                 .requestMatchers("/swagger-ui/**").permitAll()
                 .requestMatchers("/api-docs/**").permitAll()
